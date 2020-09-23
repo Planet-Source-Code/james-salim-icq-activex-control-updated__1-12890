@@ -1,0 +1,155 @@
+VERSION 5.00
+Begin VB.PropertyPage proppgGeneral 
+   Caption         =   "General"
+   ClientHeight    =   3495
+   ClientLeft      =   0
+   ClientTop       =   0
+   ClientWidth     =   5925
+   PaletteMode     =   0  'Halftone
+   ScaleHeight     =   3495
+   ScaleWidth      =   5925
+   Begin VB.TextBox txtRemotePort 
+      Height          =   330
+      Left            =   3000
+      TabIndex        =   11
+      Top             =   1020
+      Width           =   2700
+   End
+   Begin VB.TextBox txtRemoteHost 
+      Height          =   330
+      Left            =   3000
+      TabIndex        =   9
+      Top             =   370
+      Width           =   2700
+   End
+   Begin VB.TextBox txtLocalPort 
+      Height          =   330
+      Left            =   90
+      TabIndex        =   7
+      Top             =   2970
+      Width           =   2700
+   End
+   Begin VB.TextBox txtLocalIP 
+      Height          =   330
+      Left            =   105
+      TabIndex        =   5
+      Top             =   2310
+      Width           =   2700
+   End
+   Begin VB.TextBox txtUserPassword 
+      Height          =   330
+      Left            =   90
+      TabIndex        =   3
+      Top             =   1020
+      Width           =   2700
+   End
+   Begin VB.TextBox txtUserUin 
+      Height          =   330
+      Left            =   90
+      TabIndex        =   1
+      Top             =   370
+      Width           =   2700
+   End
+   Begin VB.Label lblRemotePort 
+      Caption         =   "RemotePort:"
+      Height          =   240
+      Left            =   3000
+      TabIndex        =   10
+      Top             =   770
+      Width           =   2700
+   End
+   Begin VB.Label lblRemoteHost 
+      Caption         =   "RemoteHost:"
+      Height          =   240
+      Left            =   3000
+      TabIndex        =   8
+      Top             =   120
+      Width           =   2700
+   End
+   Begin VB.Label lblLocalPort 
+      Caption         =   "Local Port:"
+      Height          =   240
+      Left            =   90
+      TabIndex        =   6
+      Top             =   2720
+      Width           =   2700
+   End
+   Begin VB.Label lblLocalIP 
+      Caption         =   "Local Host:"
+      Height          =   240
+      Left            =   105
+      TabIndex        =   4
+      Top             =   1995
+      Width           =   2700
+   End
+   Begin VB.Label lblUserPassword 
+      Caption         =   "UserPassword:"
+      Height          =   240
+      Left            =   90
+      TabIndex        =   2
+      Top             =   770
+      Width           =   2700
+   End
+   Begin VB.Label lblUserUin 
+      Caption         =   "UserUin:"
+      Height          =   240
+      Left            =   90
+      TabIndex        =   0
+      Top             =   120
+      Width           =   2700
+   End
+End
+Attribute VB_Name = "proppgGeneral"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = True
+Private Sub txtRemotePort_Change()
+    Changed = True
+End Sub
+
+
+Private Sub txtRemoteHost_Change()
+    Changed = True
+End Sub
+
+
+Private Sub txtLocalPort_Change()
+    Changed = True
+End Sub
+
+Private Sub txtLocalIP_Change()
+    Changed = True
+End Sub
+
+
+Private Sub txtUserPassword_Change()
+    Changed = True
+End Sub
+
+
+Private Sub txtUserUin_Change()
+    Changed = True
+End Sub
+
+
+Private Sub PropertyPage_ApplyChanges()
+    SelectedControls(0).RemotePort = txtRemotePort.Text
+    SelectedControls(0).RemoteHost = txtRemoteHost.Text
+    SelectedControls(0).LocalPort = txtLocalPort.Text
+    SelectedControls(0).LocalIP = txtLocalIP.Text
+    SelectedControls(0).UserPassword = txtUserPassword.Text
+    SelectedControls(0).UserUin = txtUserUin.Text
+End Sub
+
+
+Private Sub PropertyPage_SelectionChanged()
+    txtRemotePort.Text = SelectedControls(0).RemotePort
+    txtRemoteHost.Text = SelectedControls(0).RemoteHost
+    txtLocalPort.Text = SelectedControls(0).LocalPort
+    txtLocalIP.Text = SelectedControls(0).LocalIP
+    txtUserPassword.Text = SelectedControls(0).UserPassword
+    txtUserUin.Text = SelectedControls(0).UserUin
+End Sub
+
+
