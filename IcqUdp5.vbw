@@ -1,0 +1,17 @@
+IcqUdp = 61, 244, 747, 715, C, 256, 132, 396, 279, C
+modDeclaration = 75, 39, 743, 577, C
+modFunction = 118, 101, 803, 638, C
+modDebug = 154, 155, 832, 692, C
+udpEvents = 25, 54, 710, 592, C
+udpPacket = 153, 172, 837, 709, C
+udpQueue = 22, 22, 707, 560, C
+udpSend = 225, 163, 909, 701, C
+udpSocket = 89, 144, 882, 678, C
+modTimer = 66, 66, 856, 604, C
+udpMetaSend = 242, 242, 926, 780, C
+udpMetaRecv = 88, 87, 769, 626, C
+udpRecv = 82, 54, 767, 592, C
+proppgGeneral = 198, 198, 883, 842, C, 273, 222, 958, 866, C
+frmAbout = 88, 88, 803, 566, C, 52, 13, 558, 355, C
+clsAeSocketEvent = 70, 131, 888, 647, C
+clsIcqUtilities = 22, 22, 926, 704, C
